@@ -49,7 +49,7 @@ const RecipeCard = ({ recipe }: any) => {
                             </button>
                         </div>
                         <ul className="list-disc list-inside text-gray-700 text-sm">
-                            {recipe.ingredients && recipe.ingredients.map((ingredient: any, index: number) => (
+                            {recipe.Ingredients && JSON.parse(recipe.Ingredients?.value).map((ingredient: any, index: number) => (
                                 <li key={index}>{ingredient.name}</li>
                             ))}
                         </ul>
