@@ -14,11 +14,11 @@ const Navbar = ({components}: any) => {
         <nav className="bg-gradient-to-r from-purple-500 to-indigo-600 p-4">
             <div className="container mx-auto flex flex-wrap items-center justify-between">
                 <div className="flex items-center">
-                    <Link href="/">
+                    <a href="/">
                         <h1 className="text-white text-xl font-bold cursor-pointer">
                             {components?.globalDataSource?.fields?.Title?.value}
                         </h1>
-                    </Link>
+                    </a>
                 </div>
                 <button
                     className="text-white lg:hidden"
@@ -46,11 +46,11 @@ const Navbar = ({components}: any) => {
                 >
                     {components?.globalDataSource?.fields?.NavMenu?.value 
                         && JSON.parse(components?.globalDataSource?.fields?.NavMenu?.value).map((nav: any, index: number) => (
-                            <Link href={`${nav?.url}`} key={index}>
+                            <a href={`${nav?.url}`} key={index}>
                                 <span className="block lg:inline-block text-white hover:text-yellow-300 mr-4 transition duration-300">
                                     {nav?.title}
                                 </span>
-                            </Link>
+                            </a>
                         ))}
 
                     {/* <Link href="/">
